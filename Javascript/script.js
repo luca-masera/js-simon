@@ -1,15 +1,22 @@
 
 
 const numeriDaGenerare = 5
+const numeriPagine = document.getElementById('visualizza');
+
 
 
 const btn = document.querySelector('button')
 btn.addEventListener('click',function(){
     generaNumeri()
-    let numeriPagine = document.getElementById('visualizza');
+     
+    setTimeout (timer, 5000);
+    
+   
     
     
 })
+
+
 function generaNumeri(){
     const numeriGeneratiArray = [];
     
@@ -21,16 +28,23 @@ function generaNumeri(){
         if(!numeriGeneratiArray.includes(numero)){
             numeriGeneratiArray.push(numero);
         }
+
         
-        let numeriPagine = document.getElementById('visualizza');
         numeriPagine.innerHTML= numeriGeneratiArray
     }
+
     console.log(numeriGeneratiArray);
-    
-    return numeriGeneratiArray;
+    return numeriGeneratiArray; 
     
 }
+function timer (){
+    numeriPagine.classList.add('display')
+}
 
+
+
+
+    
 
 
 function getRndInteger(min, max) {
