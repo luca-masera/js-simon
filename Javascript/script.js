@@ -57,7 +57,13 @@ function chiedereNumeri(){
     const array = numeriUtente.push(num1,num2,num3,num4,num5)
 
 
-    console.log(array, numeriUtente)
+    //console.log(array, numeriUtente)
+
+    
+    if(num1 || num2 || num3 || num4 || num5 === numeriGeneratiArray){
+        console.log(num1 || num2 || num3 || num4 || num5)
+        
+    }
     
     
     if (isNaN (num1) || isNaN (num2) || isNaN (num3) || isNaN (num4) || isNaN (num5)){
