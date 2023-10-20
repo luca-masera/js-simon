@@ -2,6 +2,8 @@
 
 const numeriDaGenerare = 5
 const numeriPagine = document.getElementById('visualizza');
+const numeriGeneratiArray = [];
+const numeriUtente = [];
 
 
 
@@ -20,7 +22,7 @@ btn.addEventListener('click',function(){
 
 
 function generaNumeri(){
-    const numeriGeneratiArray = [];
+    
     
     while (numeriGeneratiArray.length < numeriDaGenerare){
         let numero = getRndInteger (1,100)
@@ -52,10 +54,10 @@ function chiedereNumeri(){
     let num4 = parseInt(prompt('Quanti numeri ti ricordi?'))
     let num5 = parseInt(prompt('Quanti numeri ti ricordi?'))
 
-    let numeriUtente = (num1,num2,num3,num4,num5).split('')
-    console.log (numeriUtente)
+    const array = numeriUtente.push(num1,num2,num3,num4,num5)
 
-    console.log(num1,num2,num3,num4,num5)
+
+    console.log(array, numeriUtente)
     
     
     if (isNaN (num1) || isNaN (num2) || isNaN (num3) || isNaN (num4) || isNaN (num5)){
