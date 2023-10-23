@@ -11,8 +11,8 @@ const btn = document.querySelector('button')
 btn.addEventListener('click',function(){
     generaNumeri()
      
-    setTimeout (timer, 5000);
-    setTimeout (chiedereNumeri, 6000)
+    setTimeout (timer, 30000);
+    setTimeout (chiedereNumeri, 35000)
 
     
    
@@ -42,7 +42,7 @@ function generaNumeri(){
     
 }
 function timer (){
-    numeriPagine.classList.add('display')
+    numeriPagine.classList.add('display');
 }
 
 
@@ -54,16 +54,30 @@ function chiedereNumeri(){
     let num4 = parseInt(prompt('Quanti numeri ti ricordi?'))
     let num5 = parseInt(prompt('Quanti numeri ti ricordi?'))
 
-    const array = numeriUtente.push(num1,num2,num3,num4,num5)
+    //numeriUtente.push(num1,num2,num3,num4,num5)
+    //console.log (numeriUtente)
 
 
     //console.log(array, numeriUtente)
 
     
-    if(num1 || num2 || num3 || num4 || num5 === numeriGeneratiArray){
-        console.log(num1 || num2 || num3 || num4 || num5)
-        
+    if(numeriGeneratiArray.includes(num1)){
+        numeriUtente.push(num1)       
+                
+    }if(numeriGeneratiArray.includes(num2)){
+        numeriUtente.push(num2)       
+                
+    }if(numeriGeneratiArray.includes(num3)){
+        numeriUtente.push(num3)       
+                
+    }if(numeriGeneratiArray.includes(num4)){
+        numeriUtente.push(num4)       
+                
+    }if(numeriGeneratiArray.includes(num5)){
+        numeriUtente.push(num5)       
+                
     }
+    console.log(numeriUtente)
     
     
     if (isNaN (num1) || isNaN (num2) || isNaN (num3) || isNaN (num4) || isNaN (num5)){
